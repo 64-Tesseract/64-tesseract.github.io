@@ -1,19 +1,19 @@
 @font-face {
     font-family: "Ubuntu";
-    src: url("./fonts/Ubuntu-R.ttf")      format("truetype"),
-         url("./fonts/Ubuntu-RI.ttf")     format("truetype"),
-         url("./fonts/Ubuntu-M.ttf")      format("truetype"),
-         url("./fonts/Ubuntu-MI.ttf")     format("truetype"),
-         url("./fonts/Ubuntu-B.ttf")      format("truetype"),
-         url("./fonts/Ubuntu-BI.ttf")     format("truetype");
+    src: url("../64_Tesseract-Games/fonts/Ubuntu-R.ttf")      format("truetype"),
+         url("../64_Tesseract-Games/fonts/Ubuntu-RI.ttf")     format("truetype"),
+         url("../64_Tesseract-Games/fonts/Ubuntu-M.ttf")      format("truetype"),
+         url("../64_Tesseract-Games/fonts/Ubuntu-MI.ttf")     format("truetype"),
+         url("../64_Tesseract-Games/fonts/Ubuntu-B.ttf")      format("truetype"),
+         url("../64_Tesseract-Games/fonts/Ubuntu-BI.ttf")     format("truetype");
 }
 
 @font-face {
     font-family: "UbuntuMono";
-    src: url("./fonts/UbuntuMono-R.ttf")  format("truetype"),
-         url("./fonts/UbuntuMono-RI.ttf") format("truetype"),
-         url("./fonts/UbuntuMono-B.ttf")  format("truetype"),
-         url("./fonts/UbuntuMono-BI.ttf") format("truetype");
+    src: url("../64_Tesseract-Games/fonts/UbuntuMono-R.ttf")  format("truetype"),
+         url("../64_Tesseract-Games/fonts/UbuntuMono-RI.ttf") format("truetype"),
+         url("../64_Tesseract-Games/fonts/UbuntuMono-B.ttf")  format("truetype"),
+         url("../64_Tesseract-Games/fonts/UbuntuMono-BI.ttf") format("truetype");
 }
 
 
