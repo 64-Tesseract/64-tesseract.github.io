@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("fonts/Ubuntu-R.ttf")      format("truetype"),
+         url("fonts/Ubuntu-RI.ttf")     format("truetype"),
+         url("fonts/Ubuntu-M.ttf")      format("truetype"),
+         url("fonts/Ubuntu-MI.ttf")     format("truetype"),
+         url("fonts/Ubuntu-B.ttf")      format("truetype"),
+         url("fonts/Ubuntu-BI.ttf")     format("truetype");
+}
+
+@font-face {
+    font-family: "UbuntuMono";
+    src: url("fonts/UbuntuMono-R.ttf")  format("truetype"),
+         url("fonts/UbuntuMono-RI.ttf") format("truetype"),
+         url("fonts/UbuntuMono-B.ttf")  format("truetype"),
+         url("fonts/UbuntuMono-BI.ttf") format("truetype");
+}
+
+
+* {
+    font-family: "Ubuntu";
+    color: #ccc;
+    font-size: 20px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 10px 10px 0 10px;
+}
+
+h1 {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+code {
+    font-family: "UbuntuMono";
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+a, a:link, a:visited, a:active {
+    color: #e11;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #822;
+    text-decoration: underline;
+}
+
+.inline {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headbtn {
+    font-family: "Ubuntu";
+    font-size: 30px;
+}
+
+
+body {
+    background-color: #000;
+    background-image: linear-gradient(to right, #200, #000, #000, #000, #000, #200);
+    margin: 0;
+    padding: 0;
+}
+
+div, section {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(to right, #200, #000, #000, #000, #000, #200);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.section-text {
+    text-align: center;
+    padding: 0 5%;
+}
+
+.os-img {
+    height: 35px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 1280px) {
+    h1.header-title {
+        display: inline;
+        padding-right: 10px;
+    }
+    
+    .section-text {
+        padding: 0 20%;
+    }
+    
+    .section-game {
+        display: flex;
+    }
+}
