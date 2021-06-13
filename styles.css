@@ -1,19 +1,19 @@
 @font-face {
     font-family: "Ubuntu";
-    src: url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts/Ubuntu-R.ttf")      format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts/Ubuntu-RI.ttf")     format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts/Ubuntu-M.ttf")      format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts/Ubuntu-MI.ttf")     format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts//Ubuntu-B.ttf")      format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts//Ubuntu-BI.ttf")     format("truetype");
+    src: url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts/Ubuntu-R.ttf")      format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts/Ubuntu-RI.ttf")     format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts/Ubuntu-M.ttf")      format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts/Ubuntu-MI.ttf")     format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts//Ubuntu-B.ttf")      format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts//Ubuntu-BI.ttf")     format("truetype");
 }
 
 @font-face {
     font-family: "UbuntuMono";
-    src: url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts//UbuntuMono-R.ttf")  format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts//UbuntuMono-RI.ttf") format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts//UbuntuMono-B.ttf")  format("truetype"),
-         url("https://github.com/64-Tesseract/64_Tesseract-Games/blob/main/fonts//UbuntuMono-BI.ttf") format("truetype");
+    src: url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts//UbuntuMono-R.ttf")  format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts//UbuntuMono-RI.ttf") format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts//UbuntuMono-B.ttf")  format("truetype"),
+         url("https://github.com/64-Tesseract/64_Tesseract-Games/raw/main/fonts//UbuntuMono-BI.ttf") format("truetype");
 }
 
 
