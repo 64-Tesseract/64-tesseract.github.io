@@ -103,7 +103,11 @@ header {
 
 .section-text {
     text-align: center;
-    padding: 0 5%;
+    padding: 0 20%;
+}
+
+.downloads-images {
+    padding-top: 20px;
 }
 
 .os-img {
@@ -112,18 +116,40 @@ header {
     vertical-align: middle;
 }
 
+.game-img {
+    max-height: 128px;
+}
+
 
 @media (min-width: 1280px) {
+    .downloads {
+        margin-bottom: 40px;
+    }
+    
     h1.header-title {
         display: inline;
         padding-right: 10px;
     }
     
-    .section-text {
-        padding: 0 20%;
-    }
-    
     .section-game {
         display: flex;
+    }
+}
+
+@media (max-width: 1280px) {
+    .section-text {
+        padding: 0 5%;
+    }
+    
+    .game-img {
+        display: inline;
+        vertical-align: middle;
+    }
+    
+    .downloads-images {
+        display: flex;
+        column-gap: 30px;
+        align-items: center;
+        justify-content: center;
     }
 }

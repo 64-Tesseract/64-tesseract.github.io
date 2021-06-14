@@ -27,12 +27,13 @@
                     <p>This is one of the easier half-completed games to run, due to it being written in an interpreted language. You may open <code>snake_menu.sh</code> for a simple "GUI" settings screen, and when you're ready you can press space to jump into the game!
                     <p>However, Bash isn't terribly efficient when it comes to writing interactive scripts, let alone handling large arrays, so it may slow down a bit.</p>
                 </div>
-                <div style="flex: 30%;">
-                    <h3>Downloads</h3>
-                    <p><a target="_blank" href="https://github.com/64-Tesseract/Bash-Snake">Github</a></p>
+                <div style="flex: 30%;"  class="downloads-images">
+                    <div class="downloads">
+                        <h3>Downloads</h3>
+                        <p><a target="_blank" href="https://github.com/64-Tesseract/Bash-Snake">Github</a></p>
+                    </div>
                     
-                    <br>
-                    <img src="Images/snake.png" style="max-height: 128px;">
+                    <img src="Images/snake.png" class="game-img">
                 </div>
             </section>
             
@@ -45,11 +46,12 @@
                     <p>Players can move a character by holding <b>one</b> of the WASD keys, and turn with J and L. You can venture through character-based hallways looking for poorly-anti-aliased items and getting lost in looping rooms. It's got customizable speeds, a variable FOV between 0 and 360 degrees, and decent wall collision detection. The screen even has a fancy head bob!
                     <p>Of course, it's not perfect - what could you expect from my second C project? The rendering can flicker sometimes, whether it's from the rendering thread being slow or rays moving through portals weirdly; and it's a pain to use, since maps are read from <code>.txt</code> files and <code>ncurses</code> isn't good with keyboard presses... but for a proof-of-concept, it's a pretty cool gimmick, I think.</p>
                 </div>
-                <div style="flex: 30%;">
-                    <h3>Downloads</h3>
-                    <p><a target="_blank" href="https://github.com/64-Tesseract/2D-Raycaster">Github</a></p>
+                <div style="flex: 30%;" class="downloads-images">
+                    <div class="downloads">
+                        <h3>Downloads</h3>
+                        <p><a target="_blank" href="https://github.com/64-Tesseract/2D-Raycaster">Github</a></p>
+                    </div>
                     
-                    <br>
                     <img src="Images/raycaster.png" style="max-height: 128px;">
                 </div>
             </section>
@@ -66,16 +68,17 @@
                     <p>At this stage, I have created one more computer. This one didn't take up the bottom half of the simulation window (only a sixth or so in the corner), was a bit faster and was more efficient. However, being based off a theoretical single-code CPU instruction set, it lacked any bit operations besides subtracting. Also, while this computer had double the memory space the previous one did, the program is stored in the same system, meaning it can be overwritten or modified and with specific inputs one could theoretically inject code.
                     <p>For my last 2 computers, I have also written a "machine-code" compiler in LUA that automatically places filter pixels as needed. After having created these, the next step for me to take is to create a computer with recent "subframe" technology, which exploits the update order of pixels to create incredibly fast mechanisms.</p>
                 </div>
-                <div style="flex: 30%;">
-                    <h3>Game Saves</h3>
-                    <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2487994">Brainf*** Interpreter</a>
-                    <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2601751">Poorly Organized FILT Computer</a>
-                    <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2714304">Quad-Instruction FILT Computer</a></p>
+                <div style="flex: 30%;" class="downloads-images">
+                    <div class="downloads">
+                        <h3>Game Saves</h3>
+                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2487994">Brainf*** Interpreter</a>
+                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2601751">Poorly Organized FILT Computer</a>
+                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2714304">Quad-Instruction FILT Computer</a></p>
+                    </div>
                     
-                    <br>
-                    <img src="Images/tpt0.png" style="max-height: 128px;">
-                    <img src="Images/tpt1.png" style="max-height: 128px;">
-                    <img src="Images/tpt2.png" style="max-height: 128px;">
+                    <img src="Images/tpt0.png" class="game-img">
+                    <img src="Images/tpt1.png" class="game-img">
+                    <img src="Images/tpt2.png" class="game-img">
                 </div>
             </section>
         </section>
