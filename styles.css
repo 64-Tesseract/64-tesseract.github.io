@@ -16,11 +16,14 @@
          url("Fonts/UbuntuMono-BI.ttf") format("truetype");
 }
 
+:root {
+    --phoneZoom: 1;
+}
 
 * {
     font-family: "Ubuntu";
     color: #ccc;
-    font-size: 20px;
+    font-size: calc(20px * var(--phoneZoom));
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -28,26 +31,26 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 42px;
+    font-size: calc(42px * var(--phoneZoom));
     font-style: normal;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: calc(30px * var(--phoneZoom));
     font-style: normal;
     font-weight: bold;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: calc(28px * var(--phoneZoom));
     font-style: italic;
     font-weight: bold;
 }
 
 code {
     font-family: "UbuntuMono";
-    font-size: 22px;
+    font-size: calc(22px * var(--phoneZoom));
     font-style: italic;
     font-weight: normal;
     margin-left: 4px;
@@ -75,7 +78,7 @@ a:hover {
 
 .headbtn {
     font-family: "Ubuntu";
-    font-size: 30px;
+    font-size: calc(30px * var(--phoneZoom));
 }
 
 
@@ -101,54 +104,82 @@ header {
     padding: 10px 0;
 }
 
+h1.header-title {
+    display: inline;
+    padding-right: 10px;
+}
+
+h3.game-title {
+    display: inline;
+    padding-right: 10px;
+}
+
 .section-text {
     text-align: center;
     padding: 0 20%;
+}
+    
+.section-game {
+    display: flex;
 }
 
 .downloads-images {
     padding-top: 20px;
 }
 
+.downloads-group {
+    flex: 50%;
+    margin-bottom: 40px;
+}
+
 .os-img {
-    height: 35px;
+    height: calc(35px * var(--phoneZoom));
     margin-left: 20px;
     vertical-align: middle;
 }
 
 .game-img {
-    max-height: 128px;
+    max-height: calc(128px * var(--phoneZoom));
+    display: block;
+    margin: 20px auto 20px auto;
+}
+
+.game-img-group {
+    flex: 50%;
+    padding: 0;
+    margin: 0 0 40px 0;
 }
 
 
-@media (min-width: 1280px) {
-    .downloads {
-        margin-bottom: 40px;
+@media (max-width: 1280px) {
+    :root {
+        --phoneZoom: 2;
     }
     
     h1.header-title {
-        display: inline;
-        padding-right: 10px;
+        display: block;
+        padding-right: 0;
     }
     
-    .section-game {
-        display: flex;
+    h3.game-title {
+        display: block;
     }
-}
-
-@media (max-width: 1280px) {
+    
     .section-text {
         padding: 0 5%;
     }
     
-    .game-img {
+    .section-game {
+        display: block;
+    }
+    
+    .game-img-section {
         display: inline;
         vertical-align: middle;
     }
     
     .downloads-images {
         display: flex;
-        column-gap: 30px;
         align-items: center;
         justify-content: center;
     }
