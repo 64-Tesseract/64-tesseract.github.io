@@ -91,7 +91,8 @@
                     <p>Thus was born the <a target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck">Brainf***</a> Interpreter - using large cells to keep track of numbers and a clunky machine to move between them, this computer could handle basic IO, addition/subtraction, and nested loops... But, it had a horribly slow speed with everything it did and amazingly poor accuracy when outputting numbers.
                     <p>TPT also has a mechanic where binary numbers (up to 30 bits) may be sent via filters and ray emitters. Deciding to create a computer with filters, I ended up with a huge, poorly organized mess that could perform many numerical operations. It also had bigger & better memory, plus a longer ROM tape, though it was still slow, and it had a very weird language.
                     <p>After this, I have created one more computer. This one took up much less space, and was a bit faster. However, being based off a theoretical minimal CPU instruction set, it lacked many features to be useful. Also, while this computer had double the RAM the previous one did, the program is stored in the same space, meaning it can be overwritten.
-                    <p>For my last 2 computers, I have also made a "machine-code" compiler in LUA that manages <code>GOTO</code> tags, automatically encoding pixels. My new goal is to create a computer with "subframe" technology, exploiting the update order of pixels to create incredibly fast mechanisms.</p>
+                    <p>The next step for me was to create a computer with "subframe" technology, which exploits the update order of pixels to create incredibly fast mechanisms. After doing some research, I've learnt a bit on the topic and developed a machine that utilizes some aspects from my previous work, such as the poFILTc's dual registers (expanded to 16) and the qiFILTc's instruction format, resulting in something that's smaller, faster, and easier to code for. Most components complete their operations in under 12 frames, since I wasn't experienced enough to make <i>everything</i> subframe, but it still ended up being very fast.
+                    <p>For my last 3 computers, I have also made a "machine-code" compiler in LUA that manages <code>GOTO</code> tags and automatically encodes pixels. After having created these, the next step for me to take is to use concepts I'm learning from my university course on computer architecture and create an even more efficient system.</p>
                 </div>
                 <div style="flex: 30%;" class="downloads-images">
                     <div class="downloads-group">
@@ -99,12 +100,14 @@
                         <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2487994">Brainf*** Interpreter</a>
                         <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2601751">Poorly Organized FILT Computer</a>
                         <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2714304">Quad-Instruction FILT Computer</a></p>
+                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2738030">Subframe FILT Computer</a></p>
                     </div>
                     
                     <div class="game-img-group">
                         <img src="Images/tpt0.png" class="game-img">
                         <img src="Images/tpt1.png" class="game-img">
                         <img src="Images/tpt2.png" class="game-img">
+                        <img src="Images/tpt3.png" class="game-img">
                     </div>
                 </div>
             </section>
