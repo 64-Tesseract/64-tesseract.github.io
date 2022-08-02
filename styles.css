@@ -124,7 +124,7 @@ h3.game-title {
 }
 
 .downloads-images {
-    padding-top: 20px;
+    margin: auto;
 }
 
 .downloads-group {
@@ -182,5 +182,6 @@ h3.game-title {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 20px;
     }
 }
