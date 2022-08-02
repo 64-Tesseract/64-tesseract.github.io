@@ -22,7 +22,6 @@
             <h2>Bash Snake <img src="Images/linux.png" class="os-img"></h2>
             <section class="section-game">
                 <div style="flex: 70%;">
-                <h3>Description</h3>
                     <p>Learning Bash was a bit of an adventure for me - so somehow I ended up coding the classic Snake game for a terminal window in it!
                     <p>This is one of the easier half-completed games to run, due to it being written in an interpreted language. You may open <code>snake_menu.sh</code> for a simple "GUI" settings screen, and when you're ready you can press space to jump into the game!
                     <p>However, Bash isn't terribly efficient when it comes to writing interactive scripts, let alone handling large arrays, so it may slow down a bit.</p>
@@ -43,10 +42,9 @@
             <h2>2D Raycaster <img src="Images/linux.png" class="os-img"></h2>
             <section class="section-game">
                 <div style="flex: 70%;">
-                <h3>Description</h3>
                     <p>Inspired by the first FPS games, such as Wolfenstein 3D and Doom, I present: a terminal-based non-Euclidean maze exploring simulator, proudly written in C!
-                    <p>Players can move a character by holding <b>one</b> of the WASD keys, and turn with J and L. You can venture through character-based hallways looking for poorly-anti-aliased items and getting lost in looping rooms. It's got customizable speeds, a variable FOV between 0 and 360 degrees, and decent wall collision detection. The screen even has a fancy head bob!
-                    <p>Of course, it's not perfect - what could you expect from my second C project? The rendering can flicker sometimes, whether it's from the rendering thread being slow or rays moving through portals weirdly; and it's a pain to use, since maps are read from <code>.txt</code> files and <code>ncurses</code> isn't good with keyboard presses... but for a proof-of-concept, it's a pretty cool gimmick, I think.</p>
+                    <p>Players can move a character by holding <b>one</b> of the WASD keys, and turn with J and L. You can venture through character-based hallways looking for poorly-anti-aliased items and getting lost in looping rooms. It's got customizable speed, FOV between 0 and 360 degrees, and decent wall collision detection. There's even a fancy head bob!
+                    <p>Of course, it's not perfect - what could you expect from my second C project? The rendering can flicker sometimes, whether it's from the rendering thread being slow or rays moving through portals weirdly; and it's a pain to use, since maps are read from <code>.txt</code> files and <code>ncurses</code> isn't great with key holding... but for a proof-of-concept, it's a pretty cool gimmick, I think.</p>
                 </div>
                 <div style="flex: 30%;" class="downloads-images">
                     <div class="downloads-group">
@@ -64,10 +62,9 @@
             <h2>Noise Background <img src="Images/android.png" class="os-img"></h2>
             <section class="section-game">
                 <div style="flex: 70%;">
-                <h3>Description</h3>
-                    <p>For a long time, I was struggling to find a nice wallpaper for my phone. There was a pattern I took a liking to, though; it was a website background that simulated floating points that connected to others nearby, filling the shapes they made with a gradient. I tried looking for something similar, but the closest thing I could find was <a target="_blank" href="https://play.google.com/store/apps/details?id=com.maxelus.colorslivewallpaper">Symphony of Colors</a>, though I wasn't 100% happy with it. After discovering <a target="_blank" href="https://play.google.com/store/apps/details?id=com.calsignlabs.apde">APDE</a> - a Processing port for Android - I tried to recreate what I saw, but I couldn't get it to look right.
-                    <p>Thus, I decided to come up with my own unique pattern. At the time I was into pixel art, so after experimenting with Perlin noise, I ended up with a kind-of "flowing lava" or "energy" look. Unfortunately, my code was unorganized and confusing, so I couldn't upload it for others.
-                    <p>It was only recently that I decided I should publish this, and after lots of trial and error, I managed to recreate what I had made in an organized way. It uses the <code>data/layers.json</code> file to get information on layers, where each layer's <abbr title="Hue, Saturation, Brightness, Alpha">HSBA</abbr> channels have their own Perlin noise pattern. This lets users create nice-looking patterns without having to clumsily edit the source code.</p>
+                    <p>For a long time, I was struggling to find a nice wallpaper for my phone. There were a few patterns I took a liking too, but I wasn't 100% happy with any of the apps I found. After discovering <a target="_blank" href="https://play.google.com/store/apps/details?id=com.calsignlabs.apde">APDE</a> - a Processing port for Android - I tried to recreate what I was imagining, but I couldn't get it to look right.
+                    <p>Thus, I decided to come up with my own unique pattern. At the time I was into pixel art, so after experimenting with Perlin noise, I ended up with a kind-of "flowing lava/energy" look. Unfortunately, my code was unorganized and confusing, so I couldn't upload it for others.
+                    <p>It was only a year later that I decided I should publish it, so I completely rewrote the code in a more presentable way. It uses the <code>data/layers.json</code> file to get information on layers, where each layer's <abbr title="Hue, Saturation, Brightness, Alpha">HSBA</abbr> channels have their own Perlin noise pattern. This lets users create nice-looking patterns without having to clumsily edit the source code.</p>
                 </div>
                 <div style="flex: 30%;" class="downloads-images">
                     <div class="downloads-group">
@@ -83,16 +80,37 @@
             </section>
             
             <br><br>
-            <h2>Computers I made in The Powder Toy <img src="Images/windows.png" class="os-img"><img src="Images/linux.png" class="os-img"><img src="Images/mac.png" class="os-img"><img src="Images/android.png" class="os-img"></h2>
+            <h2>ncAuth <img src="Images/linux.png" class="os-img"></h2>
             <section class="section-game">
                 <div style="flex: 70%;">
-                <h3><del>Life Story</del> Description</h3>
-                    <p><a target="_blank" href="https://powdertoy.co.uk">The Powder Toy</a> is the legendary sandbox game in which players can create all sorts of things, anywhere from nukes to electronics. I made some functional computers, and though it's not a "programming" project, I still decided to include it here. Electronics in TPT follow a set of simple rules, and realizing I knew how to use most of these mechanics, I decided to challenge myself to create a system that imitates computers.
-                    <p>Thus was born the <a target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck">Brainf***</a> Interpreter - using large cells to keep track of numbers and a clunky machine to move between them, this computer could handle basic IO, addition/subtraction, and nested loops... But, it had a horribly slow speed with everything it did and amazingly poor accuracy when outputting numbers.
-                    <p>TPT also has a mechanic where binary numbers (up to 30 bits) may be sent via filters and ray emitters. Deciding to create a computer with filters, I ended up with a huge, poorly organized mess that could perform many numerical operations. It also had bigger & better memory, plus a longer ROM tape, though it was still slow, and it had a very weird language.
-                    <p>After this, I have created one more computer. This one took up much less space, and was a bit faster. However, being based off a theoretical minimal CPU instruction set, it lacked many features to be useful. Also, while this computer had double the RAM the previous one did, the program is stored in the same space, meaning it can be overwritten.
-                    <p>The next step for me was to create a computer with "subframe" technology, which exploits the update order of pixels to create incredibly fast mechanisms. After doing some research, I've learnt a bit on the topic and developed a machine that utilizes some aspects from my previous work, such as the poFILTc's dual registers (expanded to 16) and the qiFILTc's instruction format, resulting in something that's smaller, faster, and easier to code for. Most components complete their operations in under 12 frames, since I wasn't experienced enough to make <i>everything</i> subframe, but it still ended up being very fast.
-                    <p>For my last 3 computers, I have also made a "machine-code" compiler in LUA that manages <code>GOTO</code> tags and automatically encodes pixels. After having created these, the next step for me to take is to use concepts I'm learning from my university course on computer architecture and create an even more efficient system.</p>
+                    <p>This is probably one of my more practical projects - a GUI 2FA authenticator - but of course I had to make it interesting for myself, so I made it run in the terminal.
+                    <p>My main inspiration for this was the <a target="_blank" href="https://www.pine64.org/pinephone">PinePhone</a> running <a target="_blank" href="https://sxmo.org">SXMO</a>, which is basically the product if a Bash scripter tried to make a mobile frontend. Most if not all of its functionality is accessible from the terminal, and seeing how little software is out there gave me a bit of motivation.
+                    <p>Frontends for Linux phones are still very unpolished and the backends unoptimized, so I needed to make something that would be easy to use on a suboptimal display in a lightweight language... What better combination than C & <code>ncurses</code>? And while I was at it, I also made it scriptable & mostly usable from the command line - you can run a script taking a 2FA code as an argument, or programmatically list all the codes & extract them manually.
+                    <p>The only downside to this is that the secret keys aren't encrypted, but that's what passwords are for, right?</p>
+                </div>
+                <div style="flex: 30%;" class="downloads-images">
+                    <div class="downloads-group">
+                        <h3>Downloads</h3>
+                        <p><a target="_blank" href="https://github.com/64-Tesseract/ncAuth">Github</a></p>
+                    </div>
+                    
+                    <div class="game-img-group">
+                        <img src="Images/ncauth.gif" class="game-img">
+                    </div>
+                </div>
+            </section>
+            
+            <br><br>
+            <h2>The Powder Toy Computers <img src="Images/windows.png" class="os-img"><img src="Images/linux.png" class="os-img"><img src="Images/mac.png" class="os-img"><img src="Images/android.png" class="os-img"></h2>
+            <section class="section-game">
+                <div style="flex: 70%;">
+                    <p><a target="_blank" href="https://powdertoy.co.uk">The Powder Toy</a> is the legendary sandbox game in which players can create all sorts of things, anywhere from nukes to electronics. I made some functional computers, and though it's not strictly a "programming" project, I still think it fits here. Electronics in TPT follow a set of simple rules, and realizing I knew how to use most of these mechanics, I decided to challenge myself to create a computer-like machine.
+                    <p>Thus was born the <a target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck">Brainf***</a> Interpreter - using large cells to keep track of numbers and a clunky machine to move between them, this computer could handle basic IO, addition/subtraction, and nested loops... But it had a horribly slow speed and amazingly poor accuracy with everything it did.
+                    <p>TPT also has a mechanic where binary numbers (up to 30 bits) may be sent via filters and ray emitters. After learning it, I ended up with a huge, poorly organized mess that could perform numerical operations. It also had a compact filter-based memory, though it was still slow compared to what I would've liked... Not to mention the weird assembly language.
+                    <p>After this, I made a computer based off a theoretical minimal CPU instruction set. This one took up much less space, and was surprisingly a bit faster, however due to its nature it lacked many features to be useful. It also had a joint RAM/ROM, so it was easy to corrupt programs.
+                    <p>The next clear step for me was to create a computer with "subframe" technology, which exploits the update order of particles to create incredibly fast mechanisms. After doing some research, I've developed a computer that utilizes some aspects from my previous work, such as registers and a style of assembly, resulting in something that's smaller, faster, and easier to code for. Most components complete their operations in under 12 frames, since I wasn't experienced enough to make <i>everything</i> subframe, but it still ended up being fast.
+                    <p>Yet, I was still not satisfied with its speed. I ended up making a 4th computer, the speed & tiny size of which even surprised me. It followed a similar hardware design to the last computer, but technically it was much more advanced, boasting hundreds of potential instructions & IO modules. Its assembly language also put my last computer's to shame, with automatic constant variables & even data pointers, shoddy though they may be. Slowly but surely, I am nearing the apex of TPT computing - a 60Hz computer, completing one instruction <i>per frame</i>.
+                    <p>By the way, I also made compilers in LUA for all of my computers that manage <code>GOTO</code> tags and automatically encode filter pixels.</p>
                 </div>
                 <div style="flex: 30%;" class="downloads-images">
                     <div class="downloads-group">
@@ -101,6 +119,7 @@
                         <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2601751">Poorly Organized FILT Computer</a>
                         <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2714304">Quad-Instruction FILT Computer</a></p>
                         <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2738030">Subframe FILT Computer</a></p>
+                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2908656">Micro Subframe FILT Computer</a></p>
                     </div>
                     
                     <div class="game-img-group">
@@ -108,6 +127,7 @@
                         <img src="Images/tpt1.png" class="game-img">
                         <img src="Images/tpt2.png" class="game-img">
                         <img src="Images/tpt3.png" class="game-img">
+                        <img src="Images/tpt4.png" class="game-img">
                     </div>
                 </div>
             </section>
