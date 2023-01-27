@@ -1,138 +1,121 @@
-<!DOCTYPE html>
+<!DOCTYPEhtml>
 <html>
-    <head>
-        <title>64_Tesseract Games</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="shortcut icon" type="image/gif" href="Images/icon.gif">
-    </head>
-    
-    <body>
-        <header>
-            <h1 class="header-title">64_Tesseract Games</h1>
-            <a class="inline headbtn" href="index.html">Home</a>
-            <a class="inline headbtn" href="games.html">Games</a>
-            <a class="inline headbtn" href="projects.html">[Projects]</a>
-        </header>
-        
-        <section class="section-text">
-            <h2>My Smaller Projects</h2>
-            <p>I usually program random things for fun, and usually they don't grow to become completed games or tools. If, however, I end up half-completing a project that's cool or useful, I'll put it here!</p>
-            
-            <br><br>
-            <h2>Bash Snake <img src="Images/linux.png" class="os-img"></h2>
-            <section class="section-game">
-                <div style="flex: 70%;">
-                    <p>Learning Bash was a bit of an adventure for me - so somehow I ended up coding the classic Snake game for a terminal window in it!
-                    <p>This is one of the easier half-completed games to run, due to it being written in an interpreted language. You may open <code>snake_menu.sh</code> for a simple "GUI" settings screen, and when you're ready you can press space to jump into the game!
-                    <p>However, Bash isn't terribly efficient when it comes to writing interactive scripts, let alone handling large arrays, so it may slow down a bit.</p>
-                </div>
-                <div style="flex: 30%;"  class="downloads-images">
-                    <div class="downloads-group">
-                        <h3>Downloads</h3>
-                        <p><a target="_blank" href="https://github.com/64-Tesseract/Bash-Snake">Github</a></p>
-                    </div>
-                    
-                    <div class="game-img-group">
-                        <img src="Images/snake.png" class="game-img">
-                    </div>
-                </div>
-            </section>
-            
-            <br><br>
-            <h2>2D Raycaster <img src="Images/linux.png" class="os-img"></h2>
-            <section class="section-game">
-                <div style="flex: 70%;">
-                    <p>Inspired by the first FPS games, such as Wolfenstein 3D and Doom, I present: a terminal-based non-Euclidean maze exploring simulator, proudly written in C!
-                    <p>Players can move a character by holding <b>one</b> of the WASD keys, and turn with J and L. You can venture through character-based hallways looking for poorly-anti-aliased items and getting lost in looping rooms. It's got customizable speed, FOV between 0 and 360 degrees, and decent wall collision detection. There's even a fancy head bob!
-                    <p>Of course, it's not perfect - what could you expect from my second C project? The rendering can flicker sometimes, whether it's from the rendering thread being slow or rays moving through portals weirdly; and it's a pain to use, since maps are read from <code>.txt</code> files and <code>ncurses</code> isn't great with key holding... but for a proof-of-concept, it's a pretty cool gimmick, I think.</p>
-                </div>
-                <div style="flex: 30%;" class="downloads-images">
-                    <div class="downloads-group">
-                        <h3>Downloads</h3>
-                        <p><a target="_blank" href="https://github.com/64-Tesseract/2D-Raycaster">Github</a></p>
-                    </div>
-                    
-                    <div class="game-img-group">
-                        <img src="Images/raycaster.gif" class="game-img">
-                    </div>
-                </div>
-            </section>
-            
-            <br><br>
-            <h2>Noise Background <img src="Images/android.png" class="os-img"></h2>
-            <section class="section-game">
-                <div style="flex: 70%;">
-                    <p>For a long time, I was struggling to find a nice wallpaper for my phone. There were a few patterns I took a liking too, but I wasn't 100% happy with any of the apps I found. After discovering <a target="_blank" href="https://play.google.com/store/apps/details?id=com.calsignlabs.apde">APDE</a> - a Processing port for Android - I tried to recreate what I was imagining, but I couldn't get it to look right.
-                    <p>Thus, I decided to come up with my own unique pattern. At the time I was into pixel art, so after experimenting with Perlin noise, I ended up with a kind-of "flowing lava/energy" look. Unfortunately, my code was unorganized and confusing, so I couldn't upload it for others.
-                    <p>It was only a year later that I decided I should publish it, so I completely rewrote the code in a more presentable way. It uses the <code>data/layers.json</code> file to get information on layers, where each layer's <abbr title="Hue, Saturation, Brightness, Alpha">HSBA</abbr> channels have their own Perlin noise pattern. This lets users create nice-looking patterns without having to clumsily edit the source code.</p>
-                </div>
-                <div style="flex: 30%;" class="downloads-images">
-                    <div class="downloads-group">
-                        <h3>Downloads</h3>
-                        <p><a target="_blank" href="https://mega.nz/file/HSAjiCjA#3tcTf0K7onzQVo1L6IKnVW8s0xjaXZZf52Yd0OvOrA4">Mega - APK</a>
-                        <p><a target="_blank" href="https://mega.nz/file/6CZX1I4B#BaAJjWhIy-LlABZ2Jej0lJvabzwaw6UO-9KCzjnMNeA">Mega - Source</a></p>
-                    </div>
-                    
-                    <div class="game-img-group">
-                        <img src="Images/noise.gif" class="game-img">
-                    </div>
-                </div>
-            </section>
-            
-            <br><br>
-            <h2>ncAuth <img src="Images/linux.png" class="os-img"></h2>
-            <section class="section-game">
-                <div style="flex: 70%;">
-                    <p>This is probably one of my more practical projects - a GUI 2FA authenticator - but of course I had to make it interesting for myself, so I made it run in the terminal.
-                    <p>My main inspiration for this was the <a target="_blank" href="https://www.pine64.org/pinephone">PinePhone</a> running <a target="_blank" href="https://sxmo.org">SXMO</a>, which is basically the product if a Bash scripter tried to make a mobile frontend. Most if not all of its functionality is accessible from the terminal, and seeing how little software is out there gave me a bit of motivation.
-                    <p>Frontends for Linux phones are still very unpolished and the backends unoptimized, so I needed to make something that would be easy to use on a suboptimal display in a lightweight language... What better combination than C & <code>ncurses</code>? And while I was at it, I also made it scriptable & mostly usable from the command line - you can run a script taking a 2FA code as an argument, or programmatically list all the codes & extract them manually.
-                    <p>The only downside to this is that the secret keys aren't encrypted, but that's what passwords are for, right?</p>
-                </div>
-                <div style="flex: 30%;" class="downloads-images">
-                    <div class="downloads-group">
-                        <h3>Downloads</h3>
-                        <p><a target="_blank" href="https://github.com/64-Tesseract/ncAuth">Github</a></p>
-                    </div>
-                    
-                    <div class="game-img-group">
-                        <img src="Images/ncauth.gif" class="game-img">
-                    </div>
-                </div>
-            </section>
-            
-            <br><br>
-            <h2>The Powder Toy Computers <img src="Images/windows.png" class="os-img"><img src="Images/linux.png" class="os-img"><img src="Images/mac.png" class="os-img"><img src="Images/android.png" class="os-img"></h2>
-            <del><i>An Autobiography</i></del>
-            <section class="section-game">
-                <div style="flex: 70%;">
-                    <p><a target="_blank" href="https://powdertoy.co.uk">The Powder Toy</a> is the legendary sandbox game in which players can create all sorts of things, anywhere from nukes to electronics. I made some functional computers, and though it's not strictly a "programming" project, I still think it fits here. Electronics in TPT follow a set of simple rules, and realizing I knew how to use most of these mechanics, I decided to challenge myself to create a computer-like machine.
-                    <p>Thus was born the <a target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck">Brainf***</a> Interpreter - using large cells to keep track of numbers and a clunky machine to move between them, this computer could handle basic IO, addition/subtraction, and nested loops... But it had a horribly slow speed and amazingly poor accuracy with everything it did.
-                    <p>TPT also has a mechanic where binary numbers (up to 30 bits) may be sent via filters and ray emitters. After learning it, I ended up with a huge, poorly organized mess that could perform numerical operations. It also had a compact filter-based memory, though it was still slow compared to what I would've liked... Not to mention the weird assembly language.
-                    <p>After this, I made a computer based off a theoretical minimal CPU instruction set. This one took up much less space, and was surprisingly a bit faster, however due to its nature it lacked many features to be useful. It also had a joint RAM/ROM, so it was easy to corrupt programs.
-                    <p>The next clear step for me was to create a computer with "subframe" technology, which exploits the update order of particles to create incredibly fast mechanisms. After doing some research, I've developed a computer that utilizes some aspects from my previous work, such as registers and a style of assembly, resulting in something that's smaller, faster, and easier to code for. Most components complete their operations in under 12 frames, since I wasn't experienced enough to make <i>everything</i> subframe, but it still ended up being fast.
-                    <p>Yet, I was still not satisfied with its speed. I ended up making a 4th computer, the speed & tiny size of which even surprised me. It followed a similar hardware design to the last computer, but technically it was much more advanced, boasting hundreds of potential instructions & IO modules. Its assembly language also put my last computer's to shame, with automatic constant variables & even data pointers, shoddy though they may be. Slowly but surely, I am nearing the apex of TPT computing - a 60Hz computer, completing one instruction <i>per frame</i>.
-                    <p>By the way, I also made compilers in LUA for all of my computers that manage <code>GOTO</code> tags and automatically encode filter pixels.</p>
-                </div>
-                <div style="flex: 30%;" class="downloads-images">
-                    <div class="downloads-group">
-                        <h3>Game Saves</h3>
-                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2487994">Brainf*** Interpreter</a>
-                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2601751">Poorly Organized FILT Computer</a>
-                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2714304">Quad-Instruction FILT Computer</a></p>
-                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2738030">Subframe FILT Computer</a></p>
-                        <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2908656">Micro Subframe FILT Computer</a></p>
-                    </div>
-                    
-                    <div class="game-img-group">
-                        <img src="Images/tpt0.png" class="game-img">
-                        <img src="Images/tpt1.png" class="game-img">
-                        <img src="Images/tpt2.png" class="game-img">
-                        <img src="Images/tpt3.png" class="game-img">
-                        <img src="Images/tpt4.png" class="game-img">
-                    </div>
-                </div>
-            </section>
-        </section>
-        <br>
-    </body>
+  <head>
+      <title>64_Tesseract Games</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="shortcut icon" type="image/png" href="Images/icon.png">
+  </head>
+
+  <body>
+      <header>
+          <h1 class="header-title">64_Tesseract Games</h1>
+          <a class="inline headbtn" href="index.html">Home</a>
+          <a class="inline headbtn" href="games.html">Games</a>
+          <a class="inline headbtn" href="projects.html">[Projects]</a>
+      </header>
+
+      <section class="section-text">
+          <h2>My Smaller Projects</h2>
+          <p>I usually program random things for fun, and usually they don't grow to become completed games or tools. If, however, I end up half-completing a project that's cool or useful, I'll put it here!</p>
+
+          <br><br>
+          <h2>2D Raycaster <img src="Images/linux.png" class="os-img"></h2>
+          <section class="section-game">
+              <div style="flex: 70%;">
+                  <p>Inspired by the first FPS games, such as Wolfenstein 3D and Doom, I present: a terminal-based non-Euclidean maze exploring simulator, proudly written in C!
+                  <p>Players can move a character by holding <b>one</b> of the WASD keys, and turn with J and L. You can venture through character-based hallways looking for poorly-anti-aliased items and getting lost in looping rooms. It's got customizable speed, FOV between 0 and 360 degrees, and decent wall collision detection. There's even a fancy head bob!
+                  <p>Of course, it's not perfect - what could you expect from my second C project? The rendering can flicker sometimes, whether it's from the rendering thread being slow or rays moving through portals weirdly; and it's a pain to use, since maps are read from <code>.txt</code> files and <code>ncurses</code> isn't great with key holding... but for a proof-of-concept, it's a pretty cool gimmick, I think.</p>
+              </div>
+              <div style="flex: 30%;" class="downloads-images">
+                  <div class="downloads-group">
+                      <h3>Downloads</h3>
+                      <p><a target="_blank" href="https://github.com/64-Tesseract/2D-Raycaster">Github</a></p>
+                  </div>
+
+                  <div class="game-img-group">
+                      <img src="Images/raycaster.gif" class="game-img">
+                  </div>
+              </div>
+          </section>
+
+          <br><br>
+          <h2>Noise Background <img src="Images/android.png" class="os-img"></h2>
+          <section class="section-game">
+              <div style="flex: 70%;">
+                  <p>For a long time, I was struggling to find a nice wallpaper for my phone. There were a few patterns I took a liking to, but I wasn't 100% happy with any of the apps I found. After discovering <a target="_blank" href="https://play.google.com/store/apps/details?id=com.calsignlabs.apde">APDE</a> - a Processing port for Android - so I decided to take the opportunity and come up with my own unique pattern.
+                  <p>At the time I was into pixel art, so after experimenting with Perlin noise, I ended up with a kind-of "flowing lava/energy" look. Unfortunately, my code was unorganized and confusing, so I couldn't upload it for others.
+                  <p>It was only a year later that I decided I should publish it, so I completely rewrote the code in a more presentable way. It uses the <code>data/layers.json</code> file to get information on layers, where each layer's <abbr title="Hue, Saturation, Brightness, Alpha">HSBA</abbr> channels have their own Perlin noise pattern. This lets users create detailed, nice-looking patterns without having to clumsily edit the source code.</p>
+              </div>
+              <div style="flex: 30%;" class="downloads-images">
+                  <div class="downloads-group">
+                      <h3>Downloads</h3>
+                      <p><a target="_blank" href="https://mega.nz/file/HSAjiCjA#3tcTf0K7onzQVo1L6IKnVW8s0xjaXZZf52Yd0OvOrA4">Mega - APK</a>
+                      <p><a target="_blank" href="https://mega.nz/file/6CZX1I4B#BaAJjWhIy-LlABZ2Jej0lJvabzwaw6UO-9KCzjnMNeA">Mega - Source</a></p>
+                  </div>
+
+                  <div class="game-img-group">
+                      <img src="Images/noise.gif" class="game-img">
+                  </div>
+              </div>
+          </section>
+
+          <br><br>
+          <h2>The nc Suite <img src="Images/linux.png" class="os-img"></h2>
+          <section class="section-game">
+              <div style="flex: 70%;">
+                  <p>These are probably my more practical projects - a 2FA authenticator and Todo list - but of course I had to make it interesting for myself, so I made them run in the terminal.
+                  <p>My main inspiration for this was the <a target="_blank" href="https://www.pine64.org/pinephone">PinePhone</a> running <a target="_blank" href="https://sxmo.org">SXMO</a>, which is basically the product if a Bash scripter tried to make a mobile frontend. Most if not all of its functionality is accessible from the terminal, and seeing how little software is out there gave me a bit of motivation.
+                  <p>Frontends for Linux phones are still very unpolished and the backends unoptimized, so I needed to make something that would be easy to use on a suboptimal display in a lightweight language... What better combination than C & <code>ncurses</code>?
+                  <p><code>ncAuth</code> is a semi-scriptable authenticator that you can also use on a Linux desktop. There's a keybind in the GUI to run a script on the selected auth code, so you can for example copy it to your clipboard, or you can write a script to grab a specific code from the CLI.
+                  <p><code>ncTodo</code> is a less-scriptable Todo list with a focus on categories and subtasks - you can create tasks "under" another one, and parent tasks will average the completion ratio of all its subtasks so you can easily see how complete your projects are.
+              </div>
+              <div style="flex: 30%;" class="downloads-images">
+                  <div class="downloads-group">
+                      <h3>Downloads</h3>
+                      <p><a target="_blank" href="https://github.com/64-Tesseract/ncAuth">Github - ncAuth</a></p>
+                      <p><a target="_blank" href="https://github.com/64-Tesseract/ncTodo">Github - ncTodo</a></p>
+                  </div>
+
+                  <div class="game-img-group">
+                      <img src="Images/ncauth.gif" class="game-img">
+                      <img src="Images/nctodo.gif" class="game-img">
+                  </div>
+              </div>
+          </section>
+
+          <br><br>
+          <h2>The Powder Toy Computers</h2>
+          <del><i>An Autobiography</i></del>
+          <section class="section-game">
+              <div style="flex: 70%;">
+                  <p><a target="_blank" href="https://powdertoy.co.uk">The Powder Toy</a> is the legendary sandbox game in which players can create all sorts of things, anywhere from nukes to electronics. I made some functional computers, and though it's not strictly a "programming" project, I still think it fits here. Electronics in TPT follow a set of simple rules, and realizing I knew how to use most of these mechanics, I decided to challenge myself to create a computer-like machine.
+                  <p>Thus was born the <a target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck">Brainf***</a> Interpreter - using large cells to keep track of numbers and a clunky machine to move between them, this computer could handle basic IO, addition/subtraction, and nested loops... But it had a horribly slow speed and amazingly poor accuracy with everything it did.
+                  <p>TPT also has a mechanic where binary numbers (up to 30 bits) may be sent via filters and ray emitters. After learning it, I ended up with a huge, poorly organized mess that could perform numerical operations. It also had a compact filter-based memory, though it was still slow compared to what I would've liked... Not to mention the weird assembly language.
+                  <p>After this, I made a computer based off a theoretical minimal CPU instruction set. This one took up much less space, and was surprisingly a bit faster, however due to its nature it lacked many features to be useful. It also had a joint RAM/ROM, so it was easy to corrupt programs.
+                  <p>The next clear step for me was to create a computer with "subframe" technology, which exploits the update order of particles to create incredibly fast mechanisms. After doing some research, I've developed a computer that utilizes some aspects from my previous work, such as registers and a style of assembly, resulting in something that's smaller, faster, and easier to code for. Most components complete their operations in under 12 frames, since I wasn't experienced enough to make <i>everything</i> subframe, but it still ended up being fast.
+                  <p>Yet, I was still not satisfied with its speed. I ended up making a 4th computer, the speed & tiny size of which even surprised me. It followed a similar hardware design to the last computer, but technically it was much more advanced, boasting hundreds of potential instructions & IO modules. Its assembly language also put my last computer's to shame, with automatic constant variables & even data pointers, shoddy though they may be. Slowly but surely, I am nearing the apex of TPT computing - a 60Hz computer, completing one instruction <i>per frame</i>.
+                  <p>By the way, I also made compilers in Lua for all of my computers that manage <code>GOTO</code> tags and automatically encode filter pixels.</p>
+              </div>
+              <div style="flex: 30%;" class="downloads-images">
+                  <div class="downloads-group">
+                      <h3>Game Saves</h3>
+                      <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2487994">Brainf*** Interpreter</a>
+                      <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2601751">Poorly Organized FILT Computer</a>
+                      <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2714304">Quad-Instruction FILT Computer</a></p>
+                      <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2738030">Subframe FILT Computer</a></p>
+                      <p><a target="_blank" href="https://powdertoy.co.uk/Browse/View.html?ID=2908656">Micro Subframe FILT Computer</a></p>
+                  </div>
+
+                  <div class="game-img-group">
+                      <img src="Images/tpt0.png" class="game-img">
+                      <img src="Images/tpt1.png" class="game-img">
+                      <img src="Images/tpt2.png" class="game-img">
+                      <img src="Images/tpt3.png" class="game-img">
+                      <img src="Images/tpt4.png" class="game-img">
+                  </div>
+              </div>
+          </section>
+      </section>
+      <br>
+  </body>
 </html>
